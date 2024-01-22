@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c2c2c;
+  --accent-light-color: #ffffff;
+  --accent-dark-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  overflow: scroll;
+}
+
+.icon-back {
+  position: absolute;
+  scale: 400%;
+  margin-left: 5vw;
+  left: auto;
+  top: 50%;
+}
+/* ------ RANDOM QUOTE CONTAINER ------ */
+
+.random-quote-root {
+  margin-top: 1vh;
+  display: flex;
+  justify-content: center;
+}
+.random-quote-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 5rem;
+}
+
+.random-quote-container div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-width: 1px;
+  border-color: var(--secondary-color);
+  align-items: center;
+  padding: 1vh;
+}
+.random-quote-btn {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  cursor: pointer;
+}
+
+/* ------ PROJECT DESCRIPTION CONTAINERS ------ */
+
+.project-description-root {
+  display: flex;
+  justify-content: center;
+}
+
+.project-description-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70vw;
+  height: 4rem;
+}
+
+.project-description-container div {
+  height: 100%;
+}
+
+.project-description-container-grid-left {
+  height: 100%;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-description-container-grid-center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-description-container-grid-right {
+  height: 100%;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-description-container-grid-right p {
+  position: relative;
+  padding-left: 0.5vw;
+  text-align: right;
+}
+
+.project-description-container h4 {
+  position: relative;
+  text-align: center;
+}
+
+.project-description-container-grid-left h2 {
+  text-align: left;
+  padding-right: 0.5vw;
+}
+
+/* ------ CARD CONTAINERS ------ */
+.card-container-root {
+  margin-top: 0.5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: grid;
+  gap: 0.5vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  max-width: 70%;
+}
+
+/* ------ PROJECT CARDS ------ */
+.project-card {
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.project-card img {
+  opacity: 0.25;
+  filter: grayscale();
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: 2s;
+}
+
+.project-card h4 {
+  align-self: center;
+  color: var(--accent-light-color);
+}
+
+.project-card:hover img {
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.1s ease;
+}
+
+/* ------ INFO / CONTACT CARDS ------ */
+.info-contact-card {
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.info-contact-card img {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  position: absolute;
+  color: var(--accent-light-color);
+}
+
+.info-contact-card h4 {
+  align-self: center;
+  color: var(--accent-light-color);
+  position: absolute;
+  opacity: 1;
+}
+
+.info-contact-card:hover img {
+  opacity: 1;
+  scale: 30%;
+}
+
+.info-contact-card:hover h4 {
+  opacity: 0;
+}
+
+/* ------ SINGLE PROJECT PAGE ------ */
+
+.description-root {
+  display: flex;
+  justify-content: center;
+}
+
+.description-container {
+  width: 70vw;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-bottom: none;
+  height: 4rem;
+  justify-content: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.single-project-root {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.single-project-container {
+  display: grid;
+  gap: 0.5vw;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  width: 70vw;
+  height: 80vh;
+}
+
+.single-project-img-small {
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.single-project-img-small img {
+  opacity: 0.25;
+  filter: grayscale();
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+
+.single-project-img-small:hover img {
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.1s ease;
+}
+
+.single-project-img-big {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  grid-column: span 6;
+  grid-row: span 4;
+}
