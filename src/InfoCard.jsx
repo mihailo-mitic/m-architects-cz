@@ -1,4 +1,3 @@
-import info from "./assets/icons/info.svg";
 import { useContext } from "react";
 import { AppContext } from "./App";
 
@@ -6,20 +5,26 @@ const InfoCard = () => {
   const context = useContext(AppContext);
 
   const showContactInfo = () => {
-    context.setContactToggle(true);
+    context.setProjectData({
+      name: "Ing. arch. Mihailo Mitić",
+      images: [],
+      brief: "licensed architect no. 04 212",
+      year: "mihailo@m-architects.cz  |  +381 64 992 7428",
+      description: "",
+      category: "",
+    });
   };
 
-  const hideContactInfo = () => {
-    context.setContactToggle(false);
+  const showModalInfo = () => {
+    context.setModalVisible(true);
   };
 
   return (
     <div
       className='info-contact-card'
       onMouseEnter={showContactInfo}
-      onMouseLeave={hideContactInfo}
+      onClick={showModalInfo}
     >
-      <img src={info} alt='info.svg' />
       <h4>INFO</h4>
     </div>
   );

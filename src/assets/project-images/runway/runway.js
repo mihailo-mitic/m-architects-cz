@@ -1,8 +1,8 @@
-import image_0 from "../../../../src/assets/project-images/runway/00.png";
-import image_1 from "../../../../src/assets/project-images/runway/01.png";
-import image_2 from "../../../../src/assets/project-images/runway/02.png";
-import image_3 from "../../../../src/assets/project-images/runway/03.png";
-import image_4 from "../../../../src/assets/project-images/runway/04.png";
+import image_0 from "../../../../src/assets/project-images/runway/00.jpg";
+import image_1 from "../../../../src/assets/project-images/runway/01.jpg";
+import image_2 from "../../../../src/assets/project-images/runway/02.jpg";
+import image_3 from "../../../../src/assets/project-images/runway/03.jpg";
+import image_4 from "../../../../src/assets/project-images/runway/04.jpg";
 
 export const runway_images = [
   { id: 0, image: `${image_0}` },

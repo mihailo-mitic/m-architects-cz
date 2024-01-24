@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
 
+@media (hover: none) {
+  .project-card img {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  body {
+    background-color: var(--secondary-color);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    overflow: scroll;
+  }
+}
+
 :root {
   --primary-color: #ffffff;
   --secondary-color: #2c2c2c;
@@ -18,74 +35,56 @@ body {
   overflow: scroll;
 }
 
-.icon-back {
-  position: absolute;
-  scale: 400%;
-  margin-left: 5vw;
-  left: auto;
-  top: 50%;
-}
-/* ------ RANDOM QUOTE CONTAINER ------ */
+/* ----- PAGE LAYOUT ----- */
 
-.random-quote-root {
-  margin-top: 1vh;
+.root-container {
   display: flex;
-  justify-content: center;
-}
-.random-quote-container {
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  width: 70%;
-  height: 5rem;
-}
-
-.random-quote-container div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  border-style: solid;
-  border-top: none;
-  border-bottom: none;
-  border-width: 1px;
-  border-color: var(--secondary-color);
   align-items: center;
-  padding: 1vh;
-}
-.random-quote-btn {
-  width: 100%;
-  height: 100%;
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  color: var(--primary-color);
-  font-family: "Roboto", sans-serif;
-  font-size: large;
-  cursor: pointer;
 }
 
-/* ------ PROJECT DESCRIPTION CONTAINERS ------ */
-
-.project-description-root {
+.page-container {
+  margin: 2svh 2svw 2svh 2svw;
+  height: 90svh;
+  align-items: center;
+  width: 90svw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-self: center;
 }
+
+.top-container {
+  width: 70%;
+  height: 5%;
+  align-self: center;
+  margin-bottom: 0.35svh;
+}
+
+.middle-container {
+  width: 70%;
+  height: 80%;
+  align-self: center;
+}
+
+.bottom-container {
+  width: 70%;
+  height: 10%;
+  align-self: center;
+}
+
+/* ----- PROJECT DESCRIPTION CONTAINERS ----- */
 
 .project-description-container {
   display: grid;
-  align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 70vw;
-  height: 4rem;
-}
-
-.project-description-container div {
+  align-items: center;
+  width: 100%;
   height: 100%;
 }
 
 .project-description-container-grid-left {
   height: 100%;
-  border-style: solid;
+  border-style: solid; /*shorthand */
   border-top: none;
   border-bottom: none;
   border-left: none;
@@ -93,6 +92,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  text-align: left;
+  padding-right: 5%;
+  padding-bottom: 0.5svh;
+  font-size: 1.5svw;
+  font-weight: 800;
 }
 
 .project-description-container-grid-center {
@@ -100,6 +104,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  text-align: center;
+  font-size: 1svw;
+  padding-bottom: 0.5svh;
 }
 
 .project-description-container-grid-right {
@@ -112,41 +119,50 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-.project-description-container-grid-right p {
-  position: relative;
-  padding-left: 0.5vw;
+  padding-left: 5%;
   text-align: right;
+  font-size: 1svw;
+  padding-bottom: 0.5svh;
 }
 
-.project-description-container h4 {
-  position: relative;
-  text-align: center;
-}
-
-.project-description-container-grid-left h2 {
-  text-align: left;
-  padding-right: 0.5vw;
-}
-
-/* ------ CARD CONTAINERS ------ */
-.card-container-root {
-  margin-top: 0.5vh;
+.project-description-bottom-container {
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-bottom: none;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 1svw;
+  padding: 0.5svh 0.5svw 0.5svh 0.5svw;
 }
+/* ----- GALLERY CONTAINERS ----- */
 
-.card-container {
+.grid-6x3-container {
+  width: 100%;
+  height: 100%;
   display: grid;
-  gap: 0.5vw;
+  gap: 0.5%;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-  max-width: 70%;
+  grid-template-rows: repeat(3, 1fr);
 }
 
-/* ------ PROJECT CARDS ------ */
+.grid-7x4-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 0.5%;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+/* ----- CARDS ----- */
+
 .project-card {
+  height: 100%;
+  width: 100%;
   border-radius: 5px;
   background-color: var(--secondary-color);
   position: relative;
@@ -177,8 +193,9 @@ body {
   transition: opacity 0.1s ease;
 }
 
-/* ------ INFO / CONTACT CARDS ------ */
 .info-contact-card {
+  height: 100%;
+  width: 100%;
   border-radius: 5px;
   background-color: var(--secondary-color);
   position: relative;
@@ -188,64 +205,34 @@ body {
   cursor: pointer;
 }
 
-.info-contact-card img {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  position: absolute;
-  color: var(--accent-light-color);
+.info-contact-card:hover {
+  background-color: var(--primary-color);
+  border-style: solid;
+  border-width: 2px;
 }
 
 .info-contact-card h4 {
   align-self: center;
-  color: var(--accent-light-color);
+  color: var(--primary-color);
   position: absolute;
+  font-size: 1.75svh;
+  font-weight: 500;
   opacity: 1;
-}
-
-.info-contact-card:hover img {
-  opacity: 1;
-  scale: 30%;
 }
 
 .info-contact-card:hover h4 {
-  opacity: 0;
+  color: var(--secondary-color);
+  font-weight: 700;
 }
 
 /* ------ SINGLE PROJECT PAGE ------ */
 
-.description-root {
-  display: flex;
-  justify-content: center;
-}
-
-.description-container {
-  width: 70vw;
-  border-style: solid;
-  border-width: 1px;
-  border-top: none;
-  border-bottom: none;
-  height: 4rem;
-  justify-content: center;
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
-
-.single-project-root {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-}
-
-.single-project-container {
-  display: grid;
-  gap: 0.5vw;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(7, 1fr);
-  width: 70vw;
-  height: 80vh;
+.single-project-img-big {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  grid-column: span 6;
+  grid-row: span 4;
 }
 
 .single-project-img-small {
@@ -273,10 +260,96 @@ body {
   transition: opacity 0.1s ease;
 }
 
-.single-project-img-big {
+/* ----- MODAL INFO ----- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100svw;
+  height: 100svh;
+  background-color: var(--secondary-color);
+}
+
+.modal-content {
+  position: fixed;
+  top: 50svh;
+  left: 50svw;
   border-radius: 5px;
-  width: 100%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 30%;
+  background-color: var(--primary-color);
+  padding: 2svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-content h2 {
+  font-size: 4svh;
+  align-self: center;
+}
+
+.modal-content h3 {
+  font-size: 2svh;
+  font-weight: 600;
+  align-self: center;
+}
+
+.modal-content h4 {
+  font-size: 2svh;
+  font-weight: 500;
+  align-self: center;
+}
+
+.modal-content h5 {
+  font-size: 1.5svh;
+  font-weight: 400;
+  align-self: center;
+  margin: 0;
+}
+
+.modal-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: 40%;
+  height: 10%;
+  align-self: center;
+  margin-top: 3svh;
+  border-radius: 5px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5svh;
+}
+
+/* ----- MISC ----- */
+.icon-back {
+  position: absolute;
+  scale: 300%;
+  margin-left: 10svw;
+  left: auto;
+  top: 50%;
+}
+
+.random-quote-container {
   height: 100%;
-  grid-column: span 6;
-  grid-row: span 4;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 1svw;
+  text-align: center;
+  padding: 0.5svh 0.5svw 0.5svh 0.5svw;
+}
+
+.notfound-container {
+  position: absolute;
+  margin-left: 25svw;
+  font-size: 5svh;
+  left: auto;
+  top: 47.5%;
 }

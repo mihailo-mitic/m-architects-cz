@@ -18,17 +18,6 @@ import { visitorcentret2_images } from "./assets/project-images/visitorcentret2/
 
 export const data = [
   {
-    id: "1",
-    name: "CAPITOL PARK - SURČIN",
-    images: surcin_images,
-    brief: "shopping mall",
-    year: "2023",
-    description:
-      "Completed in 2023, project of this shopping mall spans over 2500m2 with 9 retail units. Engagement included obtaining building permit and all the other necessary licenses. Project was made inside studio HOLON doo, Belgrade",
-    category: "commercial",
-  },
-
-  {
     id: "2",
     name: "VISITOR CENTRE",
     images: visitorcentret2_images,
@@ -43,10 +32,20 @@ export const data = [
     id: "3",
     name: "TED BAKER",
     images: tedbaker_images,
-    brief: "retail unit",
+    brief: "Retail unit",
     year: "2022",
     description:
       "Situated inside Belgrade's Galerija mall, this shopping unit spans over 150m2. Work on this project included building execution drawings, necessary permits and coordination. Design by Ted Baker. Project was made inside studio HOLON doo, Belgrade",
+    category: "commercial",
+  },
+  {
+    id: "1",
+    name: "CAPITOL PARK - SURČIN",
+    images: surcin_images,
+    brief: "Shopping mall",
+    year: "2023",
+    description:
+      "Completed in 2023, project of this shopping mall spans over 2500m2 with 9 retail units. Engagement included obtaining building permit and all the other necessary licenses. Project was made inside studio HOLON doo, Belgrade",
     category: "commercial",
   },
 
@@ -54,7 +53,7 @@ export const data = [
     id: "4",
     name: "JOŠANICKA 2",
     images: josanicka_images,
-    brief: "apartment refurbishment",
+    brief: "Apartment refurbishment",
     year: "2023",
     description:
       "Refurbishment of a 90+ year old apartment, that implied complete revision and replacement of existing installations with renewal of flooring, finishes etc. Project was developed for private investor in order to prepare this realty for sale or rent",
@@ -142,7 +141,7 @@ export const data = [
     id: "12",
     name: "ARRIVALS HALL",
     images: terminal1_images,
-    brief: "Interior design of arrivals hall, T1, Prague airport",
+    brief: "Interior design of, Prague airport",
     year: "2016",
     description:
       "Project developed for Chapman Taylor Prague. Out of many airport design enhancements, this project was the first, setting standard elements for future airport design - that partially repeated in airport's restaurant, gates, retails spaces etc. The arrivals hall T1 was completely reconstructed, which included ceiling and lighting replacement and creation of new waiting areas",

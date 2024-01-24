@@ -1,8 +1,8 @@
-import image_0 from "../../../../src/assets/project-images/surcin/00.png";
-import image_1 from "../../../../src/assets/project-images/surcin/01.png";
-import image_2 from "../../../../src/assets/project-images/surcin/02.png";
-import image_3 from "../../../../src/assets/project-images/surcin/03.png";
-import image_4 from "../../../../src/assets/project-images/surcin/04.png";
+import image_0 from "../../../../src/assets/project-images/surcin/00.jpg";
+import image_1 from "../../../../src/assets/project-images/surcin/01.jpg";
+import image_2 from "../../../../src/assets/project-images/surcin/02.jpg";
+import image_3 from "../../../../src/assets/project-images/surcin/03.jpg";
+import image_4 from "../../../../src/assets/project-images/surcin/04.jpg";
 
 export const surcin_images = [
   { id: 0, image: `${image_0}` },

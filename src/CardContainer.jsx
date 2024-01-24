@@ -5,17 +5,15 @@ import { Link } from "react-router-dom";
 
 const CardContainer = () => {
   return (
-    <div className='card-container-root'>
-      <div className='card-container'>
-        {data.map((project) => {
-          return (
-            <Link to={`/details`} key={project.id}>
-              <ProjectCard props={project} />
-            </Link>
-          );
-        })}
-        <InfoCard />
-      </div>
+    <div className='grid-6x3-container'>
+      {data.map((project) => {
+        return (
+          <Link to={`/details`} key={project.id}>
+            <ProjectCard props={project} />
+          </Link>
+        );
+      })}
+      <InfoCard />
     </div>
   );
 };

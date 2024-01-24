@@ -2,10 +2,11 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../App";
 import left from "../assets/icons/chevron_left.svg";
+import ProjectDescription from "../ProjectDescription";
 
 const SingleProjectPage = () => {
   const context = useContext(AppContext);
-  const { description } = context.projectData;
+  const { name, brief, year, description } = context.projectData;
 
   const [mainImage, setMainImage] = useState(
     context.projectData.images[0].image
@@ -15,6 +16,7 @@ const SingleProjectPage = () => {
   );
 
   const handleClick = (id) => {
+    /* if id===trenutnoj slici, prikazi sledecu */
     setMainImage(context.projectData.images[id].image);
     setSideImages(
       context.projectData.images.filter((image) => image.id !== id)
@@ -23,29 +25,43 @@ const SingleProjectPage = () => {
 
   return (
     <>
-      <div className='single-project-root'>
-        <div className='single-project-container'>
-          <div className='single-project-img-big'>
-            <img src={mainImage} className='single-project-img-big' />
+      <div className='root-container'>
+        <div className='page-container'>
+          <div className='top-container'>
+            <ProjectDescription
+              name={name}
+              brief={brief}
+              description={description}
+              year={year}
+            />
           </div>
-          {sideImages.map((image) => {
-            return (
-              <div className='single-project-img-small' key={image.id}>
-                <img
-                  src={image.image}
-                  className='single-project-img-small'
-                  onClick={() => handleClick(image.id)}
-                />
-              </div>
-            );
-          })}
+
+          <div className='middle-container'>
+            <div className='grid-7x4-container'>
+              <img src={mainImage} className='single-project-img-big' />
+
+              {sideImages.map((image) => {
+                return (
+                  <div className='single-project-img-small' key={image.id}>
+                    <img
+                      src={image.image}
+                      className='single-project-img-small'
+                      onClick={() => handleClick(image.id)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className='bottom-container'>
+            <div className='project-description-bottom-container'>
+              {description}
+            </div>
+          </div>
         </div>
       </div>
-      <div className='description-root'>
-        <div className='description-container'>
-          <p>{description}</p>
-        </div>
-      </div>
+
       <Link to='/'>
         <div className='icon-back'>
           <img src={left} alt='left.svg' />
