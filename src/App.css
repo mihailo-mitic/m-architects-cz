@@ -1,22 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
 
-@media (hover: none) {
-  .project-card img {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-
-  body {
-    background-color: var(--secondary-color);
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    overflow: scroll;
-  }
-}
-
 :root {
   --primary-color: #ffffff;
   --secondary-color: #2c2c2c;
@@ -352,4 +335,50 @@ body {
   font-size: 5svh;
   left: auto;
   top: 47.5%;
+}
+
+@media (hover: none) {
+  .project-card img {
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    filter: none;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+  }
+
+  .grid-6x3-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 0.5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .grid-7x4-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 0.5%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+
+  .single-project-img-big {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    grid-column: span 4;
+    grid-row: span 6;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover;
+  }
+
+  .single-project-img-big img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover;
+  }
 }
