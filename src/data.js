@@ -51,7 +51,7 @@ export const data = [
 
   {
     id: "4",
-    name: "JOŠANICKA 2",
+    name: "JOŠANIČKA 2",
     images: josanicka_images,
     brief: "Apartment refurbishment",
     year: "2023",
