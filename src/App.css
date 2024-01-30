@@ -28,29 +28,29 @@ body {
 
 .page-container {
   margin: 2svh 2svw 2svh 2svw;
-  height: 90svh;
-  align-items: center;
-  width: 90svw;
+  /* height: 90svh; */
+  /* width: 90svw; */
   display: flex;
+  align-items: center;
   flex-direction: column;
   align-self: center;
 }
 
 .top-container {
-  width: 70%;
+  width: 90%;
   height: 5%;
   align-self: center;
   margin-bottom: 0.35svh;
 }
 
 .middle-container {
-  width: 70%;
+  width: 90%;
   height: 80%;
   align-self: center;
 }
 
 .bottom-container {
-  width: 70%;
+  width: 90%;
   height: 10%;
   align-self: center;
 }
@@ -75,10 +75,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  text-align: left;
+  text-align: right;
   padding-right: 5%;
   padding-bottom: 0.5svh;
-  font-size: 1.5svw;
+  /* font-size: 1.5svw; */
   font-weight: 800;
 }
 
@@ -88,7 +88,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   text-align: center;
-  font-size: 1svw;
+  /* font-size: 1svw; */
   padding-bottom: 0.5svh;
 }
 
@@ -103,8 +103,8 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding-left: 5%;
-  text-align: right;
-  font-size: 1svw;
+  text-align: left;
+  /* font-size: 1svw; */
   padding-bottom: 0.5svh;
 }
 
@@ -118,18 +118,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-size: 1svw;
+  /* font-size: 1svw; */
   padding: 0.5svh 0.5svw 0.5svh 0.5svw;
 }
 /* ----- GALLERY CONTAINERS ----- */
 
 .grid-6x3-container {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  gap: 0.5%;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .grid-7x4-container {
@@ -144,9 +142,10 @@ body {
 /* ----- CARDS ----- */
 
 .project-card {
-  height: 100%;
-  width: 100%;
+  height: 250px;
+  width: 250px;
   border-radius: 5px;
+  margin: 5px;
   background-color: var(--secondary-color);
   position: relative;
   overflow: hidden;
@@ -177,8 +176,8 @@ body {
 }
 
 .info-contact-card {
-  height: 100%;
-  width: 100%;
+  height: 250px;
+  width: 250px;
   border-radius: 5px;
   background-color: var(--secondary-color);
   position: relative;
@@ -198,7 +197,7 @@ body {
   align-self: center;
   color: var(--primary-color);
   position: absolute;
-  font-size: 1.75svh;
+  /* font-size: 1.75svh; */
   font-weight: 500;
   opacity: 1;
 }
@@ -324,7 +323,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-size: 1svw;
+  /* font-size: 1svw; */
   text-align: center;
   padding: 0.5svh 0.5svw 0.5svh 0.5svw;
 }
@@ -337,7 +336,9 @@ body {
   top: 47.5%;
 }
 
-@media (hover: none) {
+/* ----- NON-HOVER DEVICES ----- */
+
+/* @media (hover: none) {
   .project-card img {
     opacity: 1 !important;
     width: 100% !important;
@@ -375,12 +376,12 @@ body {
     object-fit: cover;
   }
 
-  /* .single-project-img-big img {
+  .single-project-img-big img {
     width: 100%;
     height: 100%;
     aspect-ratio: 1/1 !important;
     object-fit: cover;
-  } */
+  }
 
   .middle-container {
     width: 70%;
@@ -388,4 +389,4 @@ body {
     align-self: center;
     overflow: scroll;
   }
-}
+} */
