@@ -353,6 +353,12 @@ body {
     margin-bottom: 0.35svh;
   }
 
+  .middle-container {
+    width: 70%;
+    height: 80%;
+    align-self: center;
+  }
+
   .bottom-container {
     width: 70%;
     height: 10%;
@@ -375,6 +381,7 @@ body {
     gap: 0.5%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
+    overflow: scroll;
   }
 
   .grid-container-details-page {
@@ -384,6 +391,7 @@ body {
     gap: 0.5%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
+    overflow: scroll;
   }
 
   .single-project-img-big {
@@ -392,23 +400,29 @@ body {
     height: 100%;
     grid-column: span 4;
     grid-row: span 6;
-    aspect-ratio: 1/1;
     object-fit: cover;
   }
 
   .single-project-img-big img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1/1;
     filter: none;
+  }
+
+  .single-project-img-small img {
+    opacity: 1;
+    filter: none;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
-  .middle-container {
-    width: 70%;
-    height: 80%;
-    align-self: center;
-    overflow: scroll;
+  .icon-back {
+    position: fixed;
+    scale: 300%;
+    margin-left: 5px;
+    left: auto;
+    top: 50%;
   }
 
   @media (orientation: portrait) {
