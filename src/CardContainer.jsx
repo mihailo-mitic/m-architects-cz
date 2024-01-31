@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const CardContainer = () => {
   return (
-    <div className='grid-6x3-container'>
+    <div className='grid-container-main-page'>
       {data.map((project) => {
         return (
           <Link to={`/details`} key={project.id}>

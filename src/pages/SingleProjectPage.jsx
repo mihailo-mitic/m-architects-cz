@@ -37,7 +37,7 @@ const SingleProjectPage = () => {
           </div>
 
           <div className='middle-container'>
-            <div className='grid-7x4-container'>
+            <div className='grid-container-details-page'>
               <img src={mainImage} className='single-project-img-big' />
 
               {sideImages.map((image) => {
